@@ -5,10 +5,10 @@
 
 	<groupId>com.sikorski</groupId>
 	<artifactId>weatherpredictor</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>weatherpredictor</name>
+	<name>WeatherPredictor</name>
 	<description>Predykcja pogody na podstawie zagregowanych danych</description>
 
 	<parent>
@@ -24,23 +24,23 @@
 		<java.version>1.8</java.version>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>jitpack.io</id>
-			<url>https://jitpack.io</url>
-		</repository>
-	</repositories>
-
 	<dependencies>
+
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>nz.ac.waikato.cms.weka</groupId>
+			<artifactId>weka-dev</artifactId>
+			<version>3.9.1</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.github.sanity</groupId>
-			<artifactId>quickml</artifactId>
-			<version>10.16</version>
+			<groupId>com.sikorski.weatherapp</groupId>
+			<artifactId>commons</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
@@ -53,11 +53,19 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
